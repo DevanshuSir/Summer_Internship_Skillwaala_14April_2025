@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      p {
+        background-color: green;
+        color: white;
+        font-weight: bold;
+        padding: 30px;
+        font-size: 35px;
+      }
+
+      /* @media screen and (max-width: 700px) {
+        p {
+          background-color: brown;
+        }
+      } */
+
+      @media screen and (max-width: 575px) {
+        /* Extra Small device */
+        p {
+          background-color: skyblue;
+          color: black;
+        }
+      }
+
+      @media (min-width: 576px) and (max-width: 767px) {
+        /* Small device */
+        p {
+          background-color: brown;
+        }
+      }
+
+      @media (min-width: 768px) and (max-width: 1199px) {
+        /* Large device */
+        p {
+          background-color: yellowgreen;
+          color: black;
+        }
+      }
+
+      @media (min-width: 1200px) {
+        p {
+          background-color: black;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi sapiente
+      est qui consequuntur fuga blanditiis rem accusamus porro voluptatibus
+      illo!
+    </p>
+  </body>
+</html>

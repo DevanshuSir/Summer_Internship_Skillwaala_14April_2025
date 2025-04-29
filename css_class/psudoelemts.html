@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      p {
+        color: brown;
+      }
+
+      p::first-line {
+        color: rgba(255, 106, 0, 0.932);
+      }
+
+      p::first-letter {
+        color: green;
+        font-size: 30px;
+        font-family: cursive;
+      }
+
+      h1 {
+        text-align: center;
+        color: gray;
+      }
+
+      h1::before {
+        content: "🥰";
+      }
+
+      h1::after {
+        content: "👍";
+      }
+
+      label::after {
+        content: "*";
+        color: red;
+      }
+
+      body::selection {
+        background-color: black;
+        color: white;
+      }
+
+      input::placeholder {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Good Morning</h1>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi dolor
+      voluptates ab nam atque distinctio? Ullam ratione officia provident
+      corrupti?
+    </p>
+
+    <label for="">FirstName</label>
+    <input type="text" name="" id="" placeholder="FirstName" />
+  </body>
+</html>

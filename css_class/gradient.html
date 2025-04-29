@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .box1 {
+        /* background-color: brown; */
+        width: 100%;
+        height: 100px;
+        /* background-image: linear-gradient(to top, red, green, yellow); */
+
+        background: #1a1818;
+        background: linear-gradient(
+          90deg,
+          rgba(26, 24, 24, 1) 0%,
+          rgba(26, 26, 26, 1) 50%,
+          rgba(242, 241, 235, 1) 100%
+        );
+      }
+
+      .box2 {
+        width: 100%;
+        height: 200px;
+        background-image: radial-gradient(red 5%, yellow 15%, skyblue 65%);
+      }
+
+      .box3 {
+        width: 200px;
+        height: 200px;
+        /* background-color: blueviolet; */
+        background-image: conic-gradient(red 45deg, blue 90deg, green 200deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1"></div>
+
+    <div class="box2"></div>
+
+    <div class="box3"></div>
+  </body>
+</html>

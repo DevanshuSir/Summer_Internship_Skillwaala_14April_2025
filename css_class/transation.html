@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .box1 {
+        background-color: brown;
+        width: 150px;
+        height: 150px;
+        /* transition: width 4s; */
+        /* transition-property: width;
+        transition-duration: 4s;
+        transition-delay: 1s; */
+        transition: width 4s;
+      }
+
+      .box1:hover {
+        width: 100%;
+        background-color: yellow;
+      }
+
+      .box2 {
+        background-color: black;
+        width: 100px;
+        height: 100px;
+        margin: auto;
+        transition: all 2s;
+      }
+
+      .box2:hover {
+        /* transform: translateY(-20px); */
+        transform: rotate(180deg);
+      }
+
+      table,
+      tr,
+      td,
+      th {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+
+      table {
+        width: 100%;
+        margin: 10px;
+      }
+      table td {
+        text-align: center;
+      }
+
+      table th {
+        padding: 10px;
+        background-color: green;
+        color: white;
+      }
+
+      table td {
+        padding: 5px;
+      }
+
+      table tr:nth-child(odd) {
+        background-color: gray;
+        color: white;
+      }
+
+      table tr:hover {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1"></div>
+
+    <div class="box2"></div>
+
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Class</th>
+        <th>Roll-no</th>
+        <th>Number</th>
+      </tr>
+      <tr>
+        <td>Devanshu</td>
+        <td>12</td>
+        <td>33</td>
+        <td>111112345678</td>
+      </tr>
+      <tr>
+        <td>Devanshu</td>
+        <td>12</td>
+        <td>33</td>
+        <td>111112345678</td>
+      </tr>
+      <tr>
+        <td>Devanshu</td>
+        <td>12</td>
+        <td>33</td>
+        <td>111112345678</td>
+      </tr>
+      <tr>
+        <td>Devanshu</td>
+        <td>12</td>
+        <td>33</td>
+        <td>111112345678</td>
+      </tr>
+    </table>
+  </body>
+</html>
