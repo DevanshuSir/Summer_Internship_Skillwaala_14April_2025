@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      table,
+      tr,
+      th,
+      td {
+        border: 2px solid rgb(216, 94, 94);
+      }
+
+      #display {
+        border: none;
+        outline: none;
+        background-color: lightblue;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <h1 align="center">Calculator 😍</h1>
+      <table align="center">
+        <tr>
+          <th>
+            <input type="text" name="" id="display" />
+          </th>
+        </tr>
+        <tr>
+          <td align="center">
+            <input type="button" value="1" onclick="handleButtons('1')" />
+            <input type="button" value="2" onclick="handleButtons('2')" />
+            <input type="button" value="3" onclick="handleButtons('3')" />
+            <input type="button" value="+" onclick="handleButtons('+')" />
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            <input type="button" value="4" onclick="handleButtons('4')" />
+            <input type="button" value="5" onclick="handleButtons('5')" />
+            <input type="button" value="6" onclick="handleButtons('6')" />
+            <input type="button" value="-" onclick="handleButtons('-')" />
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            <input type="button" value="7" onclick="handleButtons('7')" />
+            <input type="button" value="8" onclick="handleButtons('8')" />
+            <input type="button" value="9" onclick="handleButtons('9')" />
+            <input type="button" value="*" onclick="handleButtons('*')" />
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            <input type="button" value="C" onclick="handleClear()" />
+            <input type="button" value="0" onclick="handleButtons('0')" />
+            <input type="button" value="=" onclick="handleCaluclate()" />
+            <input type="button" value="/" onclick="handleButtons('/')" />
+            <input type="button" value="🔙" onclick="handleOneValue()" />
+          </td>
+        </tr>
+      </table>
+    </form>
+
+    <script>
+      const display = document.getElementById("display");
+
+      function handleButtons(btn) {
+        display.value += btn;
+      }
+
+      function handleClear() {
+        display.value = "";
+      }
+
+      function handleCaluclate() {
+        display.value = eval(display.value);
+      }
+
+      function handleOneValue() {
+        display.value = display.value.slice(0, -1);
+      }
+    </script>
+  </body>
+</html>

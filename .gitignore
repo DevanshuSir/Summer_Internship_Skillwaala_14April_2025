@@ -1,2 +1,14 @@
 /js_class/js/node_modules
 /js_class/js/package-lock.json
+
+/npm/node_modules
+/npm/package-lock.json
+
+/npm_new/node_modules
+/npm_new/package-lock.json
+
+/react/frontend/node_modules
+/react/frontend/package-lock.json
+
+/todo_app/taskapp/node_modules
+/todo_app/taskapp/package-lock.json

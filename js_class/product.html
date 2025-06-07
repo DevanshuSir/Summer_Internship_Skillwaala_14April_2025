@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    />
+
+    <style>
+      #nav {
+        background-color: rgb(48, 45, 45);
+        color: white;
+      }
+
+      #nav ul li a {
+        color: white;
+      }
+
+      #product_container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        margin: 20px;
+      }
+
+      .card {
+        width: 350px;
+        background-color: rgb(188, 166, 166);
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgb(167, 193, 246);
+        text-align: center;
+      }
+
+      .card img {
+        width: 100%;
+        height: 160px;
+        border-radius: 6px;
+        object-fit: contain;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="nav">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <nav class="navbar navbar-expand-lg">
+              <div class="container-fluid">
+                <a class="navbar-brand text-light" href="#">Navbar</a>
+                <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarNav"
+                  aria-controls="navbarNav"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#"
+                        >Home</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Saerch -->
+
+    <div class="container my-5 text-center">
+      <input
+        type="text"
+        name=""
+        id="search"
+        placeholder="Search Products.."
+        class="form-control"
+        list="product"
+      />
+
+      <datalist id="product">
+        <option value="beauty"></option>
+        <option value="fragrances"></option>
+        <option value="furniture"></option>
+        <option value="groceries"></option>
+      </datalist>
+    </div>
+
+    <!-- Card -->
+    <div id="product_container"></div>
+
+    <script>
+      const searchInput = document.getElementById("search");
+
+      async function fetchData() {
+        const record = await fetch("https://dummyjson.com/products");
+
+        const data = await record.json();
+
+        displayProduct(data.products);
+
+        console.log(
+          data.products.map((value) => {
+            return value.category;
+          })
+        );
+
+        searchInput.addEventListener("input", () => {
+          const filterValue = data.products.filter((item) =>
+            item.category
+              .toLowerCase()
+              .includes(searchInput.value.toLowerCase())
+          );
+          displayProduct(filterValue);
+        });
+      }
+
+      function displayProduct(product) {
+        let html = "";
+
+        product.forEach((item) => {
+          html += `
+                     <div class="card">
+                        <img src=${item.images[0]} alt="" />
+                        <h3>${item.title}</h3>
+                        <h4>${item.price}</h4>
+                        <p>${item.description}</p>
+                     </div>
+            `;
+        });
+
+        document.getElementById("product_container").innerHTML = html;
+      }
+
+      fetchData();
+    </script>
+  </body>
+</html>

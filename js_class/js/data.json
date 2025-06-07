@@ -1,0 +1,10 @@
+{
+  "name": "Dev",
+  "age": 45,
+  "skills": ["Mongodb", "React", "express", "nodejs"],
+  "address": {
+    "city": "Jaipur",
+    "pincode": 45678
+  },
+  "IsMerried": true
+}

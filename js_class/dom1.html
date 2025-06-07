@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      h1 {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>hello class</h1>
+
+    <img
+      src="./media/1726916724_9673471.webp"
+      alt=""
+      width="250px"
+      id="image"
+    />
+
+    <a href="https://www.google.co.in/" class="atag">Google</a>
+
+    <h1 id="color">Hello Good Morning 😍</h1>
+
+    <script>
+      let iamge = (document.getElementById("image").attributes[0].value =
+        "./media/1726832044_1978557.webp");
+
+      let b = (document.getElementsByClassName("atag")[0].attributes[0].value =
+        "https://www.amazon.in");
+      console.log(b);
+
+      let c = (document.getElementById("color").style.color = "white");
+      console.log(c);
+
+      document.getElementById("color").style.backgroundColor = "brown";
+    </script>
+  </body>
+</html>
