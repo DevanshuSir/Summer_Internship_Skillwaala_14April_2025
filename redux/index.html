@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>UI Card with Social Media</title>
+    <style>
+      body {
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        background-color: #f0f0f0;
+      }
+
+      .card {
+        background-color: white;
+        width: 300px;
+        margin: 50px auto;
+        border-radius: 15px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+      }
+
+      .card img {
+        width: 100%;
+        height: 200px;
+      }
+
+      .content {
+        padding: 20px;
+      }
+
+      .content h2 {
+        margin: 0;
+        font-size: 24px;
+        color: #333;
+      }
+
+      .content p {
+        color: #777;
+        font-size: 14px;
+        margin: 10px 0 20px;
+      }
+
+      .content button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background-color 0.3s;
+      }
+
+      .content button:hover {
+        background-color: #0056b3;
+      }
+
+      .social-media {
+        margin: 15px 0;
+      }
+
+      .social-media a {
+        margin: 0 5px;
+        display: inline-block;
+      }
+
+      .social-media img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        transition: transform 0.3s;
+      }
+
+      .social-media img:hover {
+        transform: scale(1.2);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <img src="https://via.placeholder.com/300x200" alt="Card Image" />
+        <div class="content">
+          <h2>John Doe</h2>
+          <p>Web Developer | Designer</p>
+          <button>Contact Me</button>
+
+          <div class="social-media">
+            <a href="https://facebook.com" target="_blank">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
+                alt="Facebook"
+              />
+            </a>
+            <a href="https://twitter.com" target="_blank">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/733/733579.png"
+                alt="Twitter"
+              />
+            </a>
+            <a href="https://instagram.com" target="_blank">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/733/733558.png"
+                alt="Instagram"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

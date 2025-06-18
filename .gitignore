@@ -12,3 +12,12 @@
 
 /todo_app/taskapp/node_modules
 /todo_app/taskapp/package-lock.json
+
+/Frontend_project/blinkit/node_modules
+/Frontend_project/blinkit/package-lock.json
+
+/redux/reduxtoolkit/node_modules
+/redux/reduxtoolkit/package-lock.json
+
+/tailwindcss/node_modules
+/tailwindcss/package-lock.json
